@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>js countdown</title>
+<head>
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+}
+</style>
+</head>
+<body>
+<p id="may"></p>
+<script>
+let date = new Date("may,1,2023,12:00:00 am");
+date.getTime();
+setInterval(ssa,1000)
+function ssa(){
+let now = new Date();
+now.getTime();
+let newyear = date - now;
+let days = Math.floor(newyear / (1000 * 60 * 60 * 24));
+let hours = Math.floor(newyear % (1000 * 60 * 60 * 24)/(1000 * 60 * 60));
+let minutes = Math.floor(newyear % (1000 * 60 * 60) / (1000 * 60));
+let seconds = Math.floor(newyear % (1000 * 60) / 1000); 
+let may=document.getElementById('may');
+may.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+}
+</script>
+  
+</body>
+</html>
